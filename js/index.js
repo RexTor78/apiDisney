@@ -34,8 +34,8 @@ async function displayCharacters() {
     const characterSection = document.getElementById('characterSection');
     const characterData = await fetchCharactersJson();
 
-    if (characterData && characterData.items) {
-        const disneyCards = characterData.items.map(createCharacterCard).join('');
+    if (characterData && characterData.data) {
+        const disneyCards = characterData.data.map(createCharacterCard).join('');
         characterSection.innerHTML = disneyCards;
     } else {
         characterSection.innerHTML = '<p>No se pudieron cargar los personajes de Disney.</p>';
