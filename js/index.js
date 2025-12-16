@@ -26,7 +26,6 @@ async function fetchCharactersJson(page = 1) {
 function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilms, tvShows, videoGames, parkAttractions}) {
     const safeJoin = arr => (Array.isArray(arr) && arr.length) ? arr.join(', ') : 'Sin datos';
 
-
     return `
         <div class="card" style="width: 18rem;">
             <img src="${imageUrl}" class="card-img-top" alt="${name}" style="max-height:350px; object-fit:contain;">
@@ -47,9 +46,13 @@ function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilm
 async function displayCharacters(page = 1) {
     const data = await fetchCharactersJson(page);
     if (!data || !data.data) {
-        characterSection.innerHTML = '<p>No se pudieron cargar los personajes.</p>';
+        characterSection.innerHTML = '<p>No se ha podido cargar el personaje.</p>';
+
+        paginationNav.innerHTML = '';
+
         return;
     }
+
     characterSection.innerHTML = data.data.map(createCharacterCard).join('');
     renderPagination();
 }
@@ -58,10 +61,9 @@ async function displayCharacters(page = 1) {
 function renderPagination() {
     paginationNav.innerHTML = `
         <button id="prevBtn" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
-        <span>Página ${currentPage} de ${totalPages}</span>
+        <span>Página ${currentPage} </span>
         <button id="nextBtn" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>`;
-
-
+        
     document.getElementById('prevBtn').addEventListener('click', () => changePage(currentPage - 1));
     document.getElementById('nextBtn').addEventListener('click', () => changePage(currentPage + 1));
 }
@@ -70,6 +72,8 @@ function changePage(newPage) {
     if (newPage < 1 || newPage > totalPages) return;
     currentPage = newPage;
     displayCharacters(currentPage);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
 
 displayCharacters(currentPage);
