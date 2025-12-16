@@ -1,0 +1,15 @@
+Daily Scrum Breve - Lunes 15 de Diciembre de 2025
+
+​La reunión se centró en la preparación del proyecto y la estructura del equipo. Se definieron y asignaron los roles principales: Héctor Santos como Product Owner, Xavier Piñeiro como Scrum Master, y Melissa Gómez y Suso Suárez como Developers. Se creó el repositorio, se completó la clonación, y se seleccionó e inició la metodología Kanban. El equipo procedió a asignar las primeras tareas iniciales en el tablero Kanban a todos los miembros presentes, incluyendo al PO y al SM, para dar un inicio ágil al proyecto.
+​La ausencia de Suso,( motivos de salud)  podría impactar la velocidad inicial. Para el próximo día, todos los miembros presentes (Héctor, Xavier y Melissa) comenzarán a trabajar en sus respectivas tareas asignadas del tablero Kanban para maximizar el avance inicial. (by Melissa)
+
+
+
+Daily Scrum Martes 16 de Diciembre de 2025
+
+- Se reincoropra al equipo Suso tras la baja, se le informa del proyecto y de donde encontrar los recursos compartidos
+- Melissa hizo su primer commit index.thml, sigue trabajando en él y está tambien entrándole al footer y al header.
+	Tras la daily se decidirá que llevan.
+- Hector hizo index.css, nos lo mostrará tras la daily para fijar criterios. Tipografías, centrar títulos, colores, efectos blur...
+- Xavier tiene casi listo el index.js. Investigando como hacer para solucionar las imágenes que dan 404.
+

@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Waltograph';
+    src: url('../fonts/waltograph42.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Waltograph', Arial, Helvetica, sans-serif;
     background-color: #637ca1;
     padding: 20px;
 }
@@ -48,9 +56,9 @@ body {
 
 .card-title {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #3c18da;
 }
 
 .card ul {
@@ -58,17 +66,115 @@ body {
     margin: 5px 0 10px;
 }
 
-.card h6 {
+/*.card h6 {
     margin-top: 10px;
     color: #555;
-}
+}*/
 .castle-container {
-    background-image: url('https://i.pinimg.com/474x/de/fc/d8/defcd86881ac78215dbdbc1b708fc467.jpg'); 
+    position: sticky;
+    top:0%;
+    height: 100vh ;
+    background-image: url('../img/castel.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
 }
 
-.castle-container {
+/*.castle-container {
     background-attachment: fixed;
+}*/
+
+
+
+.disney-title {
+    font-family: 'Waltograph', cursive;
+    text-align: center;
+    font-size: 5rem;
+    margin: 30px 0;
+    color: #dd58dd;
+    letter-spacing: 2px;
+    text-shadow: 
+        3px 3px 0 #0e0f08,
+        6px 6px 10px rgba(0,0,0,0.7);
+}
+
+
+.page-btn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+
+.page-info {
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-self: center;
+}
+.page-btn {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.page-btn:hover {
+    transform: scale(2.1);
+}
+
+.page-btn:hover {
+    filter: drop-shadow(0 0 8px gold);
+}
+
+/*.card-title {
+    font-family: 'WaltographUI', cursive;
+    font-size: 1.3rem;
+    color: #1e90ff;
+    margin-bottom: 8px;
+}*/
+
+
+.card-allies {
+    font-family: 'Poppins', sans-serif;
+    color: #2e8b57;
+}
+
+
+.card-enemies {
+    font-family: 'Bebas Neue', cursive;
+    color: #b22222;
+    letter-spacing: 1px;
+}
+
+
+.card-films {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+
+.card-shorts {
+    font-family: 'Nunito', sans-serif;
+    color: #555;
+}
+
+.card-shows {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+}
+
+.card-games {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.65rem;
+    color: #4b0082;
+}
+
+.card-attractions {
+    font-family: 'Pacifico', cursive;
+    color: #ff8c00;
+}
+
+.page-info{
+        font-family: 'Waltograph', cursive;
+        font-size: 1.85rem;
+    color: #black;
 }
