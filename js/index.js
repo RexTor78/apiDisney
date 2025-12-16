@@ -1,6 +1,6 @@
 
 const BASE_URL = 'https://api.disneyapi.dev/character?page=';
-const PER_PAGE   = 64;                       
+const PER_PAGE   = 32;                       
 let   currentPage = 1;                        
 let   totalPages  = 1;                        
 
@@ -59,13 +59,23 @@ async function displayCharacters(page = 1) {
 
 
 function renderPagination() {
-    paginationNav.innerHTML = `
-        <button id="prevBtn" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
+    const html= `
+        <button class="prevBtn btn btn-sm btn-primary" ${currentPage === 1 ? 'disabled' : ''}>Anterior</button>
         <span>Página ${currentPage} </span>
-        <button id="nextBtn" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>`;
+        <button class="nextBtn btn btn-sm btn-primary" ${currentPage === totalPages ? 'disabled' : ''}>Siguiente</button>`;
         
+        document.getElementById('paginationTop').innerHTML    = html;
+        document.getElementById('paginationBottom').innerHTML = html;
+
+        document.querySelectorAll('.prevBtn').forEach(b => b.onclick = () => changePage(currentPage - 1));
+        document.querySelectorAll('.nextBtn').forEach(b => b.onclick = () => changePage(currentPage + 1));
+
+/*        document.querySelectorAll('.pagination-wrapper').forEach(wrapper => wrapper.innerHTML = html);
+        document.querySelectorAll('.prevBtn').forEach(btn =>btn.onclick = () => changePage(currentPage - 1));
+        document.querySelectorAll('.nextBtn').forEach(btn =>btn.onclick = () => changePage(currentPage + 1));
+
     document.getElementById('prevBtn').addEventListener('click', () => changePage(currentPage - 1));
-    document.getElementById('nextBtn').addEventListener('click', () => changePage(currentPage + 1));
+    document.getElementById('nextBtn').addEventListener('click', () => changePage(currentPage + 1));*/
 }
 
 function changePage(newPage) {
