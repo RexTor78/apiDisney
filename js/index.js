@@ -1,6 +1,6 @@
 
 const BASE_URL = 'https://api.disneyapi.dev/character?page=';
-const PER_PAGE   = 40;                       
+const PER_PAGE   = 64;                       
 let   currentPage = 1;                        
 let   totalPages  = 1;                        
 
@@ -23,16 +23,22 @@ async function fetchCharactersJson(page = 1) {
 }
 
 
-function createCharacterCard({ name, imageUrl, films, tvShows, videoGames }) {
-    const safeJoin = arr => (Array.isArray(arr) && arr.length) ? arr.join(', ') : 'No one';
+function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilms, tvShows, videoGames, parkAttractions}) {
+    const safeJoin = arr => (Array.isArray(arr) && arr.length) ? arr.join(', ') : 'Sin datos';
+
+
     return `
         <div class="card" style="width: 18rem;">
             <img src="${imageUrl}" class="card-img-top" alt="${name}" style="max-height:350px; object-fit:contain;">
             <div class="card-body">
-                <h5 class="card-title">Name: ${name}</h5>
-                <h6 class="card-films">Film: ${safeJoin(films)}</h6>
-                <h6 class="card-shows">TV Shows: ${safeJoin(tvShows)}</h6>
-                <h6 class="card-games">Video Games: ${safeJoin(videoGames)}</h6>
+                <h5 class="card-title">Nombre: ${name}</h5>
+                <h6 class="card-allies">Aliados: ${safeJoin(allies)}</h6>
+                <h6 class="card-enemies">Enemigos: ${safeJoin(enemies)}</h6>
+                <h6 class="card-films">Películas: ${safeJoin(films)}</h6>
+                <h6 class="card-shorts">Cortos: ${safeJoin(shortFilms)}</h6>
+                <h6 class="card-shows">Series: ${safeJoin(tvShows)}</h6>
+                <h6 class="card-games">Video Juegos: ${safeJoin(videoGames)}</h6>
+                <h6 class="card-attractions">Atracciones: ${safeJoin(parkAttractions)}</h6>
             </div>
         </div>`;
 }
