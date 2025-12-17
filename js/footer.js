@@ -5,7 +5,7 @@ class MyFooter extends HTMLElement {
             <div class="footer-content">
 
                 <img 
-                    src="../img/datalandWhite.png"
+                    src="img/datalandWhite.png"
                     alt="Logo dataland Disney"
                     class="footer-icon"
                 >
