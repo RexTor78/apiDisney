@@ -1,12 +1,55 @@
 
 const BASE_URL = 'https://api.disneyapi.dev/character?page=';
-const PER_PAGE   = 32;                       
+/*const PER_PAGE   = 32;   */  
+let PER_PAGE = getPerPage();
+
 let   currentPage = 1;                        
 let   totalPages  = 1;                        
 
 
 const characterSection = document.getElementById('characterSection');
 const paginationNav    = document.getElementById('paginationNav');   
+
+function getPerPage() {
+    if (window.innerWidth <= 768) {
+        return 6;   // 📱 móvil
+    } else if (window.innerWidth <= 1024) {
+        return 12;   // 📲 tablet
+    } else {
+        return 24;   // 💻 desktop
+    }
+}
+
+window.addEventListener('resize', () => {
+    const newPerPage = getPerPage();
+
+    if (newPerPage !== PER_PAGE) {
+        PER_PAGE = newPerPage;
+        currentPage = 1;
+        displayCharacters(currentPage);
+    }
+});
+ 
+function updatePerPage() {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        PER_PAGE = 6; 
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+        PER_PAGE = 16; 
+    } else {
+        PER_PAGE = 24; 
+    }
+}
+
+updatePerPage();
+currentPage = 1;
+displayCharacters(currentPage);
+
+window.matchMedia('(max-width: 1024px)').addEventListener('change', () => {
+    updatePerPage();
+    currentPage = 1;
+    displayCharacters(currentPage);
+});
+
 
 async function fetchCharactersJson(page = 1) {
     try {
