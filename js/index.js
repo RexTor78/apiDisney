@@ -33,7 +33,7 @@ function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilm
     alt="${name}"
     style="max-height:350px;object-fit:contain;width:100%;"
     onload="${checkPlaceholder}"
-    onerror="this.onerror=null;this.src='../img/LOGO_DATALAND copia.png'">`;
+    onerror="this.onerror=null;this.src='../img/datalandWhite.png'">`;
 
 
 

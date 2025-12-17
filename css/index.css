@@ -218,9 +218,35 @@ body {
 }
 
 .modal-close {
-    position: absolute;
+    position: center;
     top: 15px;
     right: 20px;
     font-size: 2rem;
     cursor: pointer;
+}
+
+.footer {
+    background: linear-gradient(65deg, #637ca1, #dd58dd);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icon {
+    width: 90px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.footer-text {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.85rem;
+    font-family: 'Waltograph', cursive;
+    text-align: center;
 }
