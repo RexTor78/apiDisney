@@ -8,8 +8,16 @@ Daily Scrum Breve - Lunes 15 de Diciembre de 2025
 Daily Scrum Martes 16 de Diciembre de 2025
 
 - Se reincoropra al equipo Suso tras la baja, se le informa del proyecto y de donde encontrar los recursos compartidos
-- Melissa hizo su primer commit index.thml, sigue trabajando en él y está tambien entrándole al footer y al header.
-	Tras la daily se decidirá que llevan.
+- Melissa hizo su primer commit index.html, sigue trabajando en él y está tambien entrándole al footer y al header.
+	Tras la daily se decidirá qué llevan.
 - Hector hizo index.css, nos lo mostrará tras la daily para fijar criterios. Tipografías, centrar títulos, colores, efectos blur...
 - Xavier tiene casi listo el index.js. Investigando como hacer para solucionar las imágenes que dan 404.
 
+
+Daily Scrum Martes 17 de Diciembre de 2025
+(11:07-11:13)
+
+- Hector: cambios de colores, imagen, botones, pruebas de abrir las cards en grande, falta footer, header
+- Melissa: subió a la rama header y footer, inicio de la estructura de la presentación
+- Suso: hizo el logo, puliendo el readme, avanzó los estilos de la presentación
+- Xavier el js está listo, se investigará la posibilidad de abrir las cards en grande
