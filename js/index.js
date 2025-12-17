@@ -25,7 +25,7 @@ async function fetchCharactersJson(page = 1) {
 function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilms, tvShows, videoGames, parkAttractions}) {
     const safeJoin = arr => (Array.isArray(arr) && arr.length) ? arr.join(', ') : 'Sin datos';
 
-        const checkPlaceholder = `if(this.naturalWidth===200 && this.naturalHeight===114){this.onerror=null;this.src='../img/LOGO_DATALAND copia.png'}`;
+        const checkPlaceholder = `if(this.naturalWidth===200 && this.naturalHeight===114){this.onerror=null;this.src='img/datalandWhite.png'}`;
 
     const imgTag = `
     <img src="${imageUrl}"
@@ -33,7 +33,7 @@ function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilm
     alt="${name}"
     style="max-height:350px;object-fit:contain;width:100%;"
     onload="${checkPlaceholder}"
-    onerror="this.onerror=null;this.src='../img/datalandWhite.png'">`;
+    onerror="this.onerror=null;this.src='img/datalandWhite.png'">`;
 
 
 
@@ -71,7 +71,7 @@ async function displayCharacters(page = 1) {
 function renderPagination() {
     const html = `
         <img 
-            src="../img/goofy.png"
+            src="img/goofy.png"
             class="page-btn prevBtn"
             alt="Página anterior"
         >
@@ -79,7 +79,7 @@ function renderPagination() {
         <span class="page-info">Página ${currentPage}</span>
 
         <img 
-            src="../img/plutoRight.png"
+            src="img/plutoRight.png"
             class="page-btn nextBtn"
             alt="Página siguiente"
         >
