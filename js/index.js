@@ -6,15 +6,14 @@ let   totalPages  = 1;
 
 
 const characterSection = document.getElementById('characterSection');
-const paginationNav    = document.getElementById('paginationNav');   // <div id="paginationNav"></div>
-
+const paginationNav    = document.getElementById('paginationNav');   
 
 async function fetchCharactersJson(page = 1) {
     try {
         const res = await fetch(`${BASE_URL}${page}&pageSize=${PER_PAGE}`);
         if (!res.ok) throw new Error(`Error ${res.status}`);
         const data = await res.json();
-        totalPages = data.totalPages;   // la API lo devuelve siempre
+        totalPages = data.totalPages;   
         return data;
     } catch (err) {
         console.error(err);
@@ -26,9 +25,21 @@ async function fetchCharactersJson(page = 1) {
 function createCharacterCard({ name, imageUrl, allies, enemies, films, shortFilms, tvShows, videoGames, parkAttractions}) {
     const safeJoin = arr => (Array.isArray(arr) && arr.length) ? arr.join(', ') : 'Sin datos';
 
+        const checkPlaceholder = `if(this.naturalWidth===200 && this.naturalHeight===114){this.onerror=null;this.src='../img/LOGO_DATALAND copia.png'}`;
+
+    const imgTag = `
+    <img src="${imageUrl}"
+    class="card-img-top"
+    alt="${name}"
+    style="max-height:350px;object-fit:contain;width:100%;"
+    onload="${checkPlaceholder}"
+    onerror="this.onerror=null;this.src='../img/LOGO_DATALAND copia.png'">`;
+
+
+
     return `
         <div class="card" style="width: 18rem;">
-            <img src="${imageUrl}" class="card-img-top" alt="${name}" style="max-height:350px; object-fit:contain;">
+            ${imgTag}
             <div class="card-body">
                 <h5 class="card-title">Nombre: ${name}</h5>
                 <h6 class="card-allies">Aliados: ${safeJoin(allies)}</h6>
@@ -65,7 +76,7 @@ function renderPagination() {
             alt="Página anterior"
         >
 
-        <span class="page-info">Página ${currentPage} </span>
+        <span class="page-info">Página ${currentPage}</span>
 
         <img 
             src="../img/plutoRight.png"
