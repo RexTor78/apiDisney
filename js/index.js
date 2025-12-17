@@ -71,7 +71,7 @@ async function displayCharacters(page = 1) {
 function renderPagination() {
     const html = `
         <img 
-            src="img/goofy.png"
+            src="../img/goofy.png"
             class="page-btn prevBtn"
             alt="Página anterior"
         >
@@ -79,7 +79,7 @@ function renderPagination() {
         <span class="page-info">Página ${currentPage}</span>
 
         <img 
-            src="img/plutoRight.png"
+            src="../img/plutoRight.png"
             class="page-btn nextBtn"
             alt="Página siguiente"
         >

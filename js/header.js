@@ -3,7 +3,7 @@ class myHeader extends HTMLElement {
     this.innerHTML = `
     <header>
         <div class="header">
-            <img src="img/datalandWhite.png" width="200px">
+            <img src="../img/datalandWhite.png" width="200px">
             <h1 class="disney-title">Bienvenidos al maravilloso mundo de los personajes Disney</h1>
           
         </div>
