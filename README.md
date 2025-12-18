@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="../apiDisney/imageLogo.png" width="200"> </p>
+<p align="center"> <img src="apiDisney/img/imageLogo.png" width="200"> </p>
 
 
 Web sobre API de ejemplo para consultar información sobre personajes, películas y parques de Disney. Está pensada como proyecto educativo/demo para mostrar endpoints REST que devuelven JSON.
