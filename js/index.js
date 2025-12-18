@@ -1,6 +1,5 @@
-
 const BASE_URL = 'https://api.disneyapi.dev/character?page=';
-/*const PER_PAGE   = 32;   */  
+
 let PER_PAGE = getPerPage();
 
 let   currentPage = 1;                        
