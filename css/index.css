@@ -76,7 +76,7 @@ body {
 .castle-container {
     position: sticky;
     top: 30px;
-    height: 80vh;
+    height: 100vh;
     background-image: url('../img/castel.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -260,7 +260,7 @@ body {
 @media (max-width: 1024px) {
     .castle-container {
         position: relative;
-        height: 300px;
+        height: 500%;
         background-position: center;
     }
 }
