@@ -153,6 +153,4 @@ Registro semanal (resúmen):
 - **Jueves** — Revisión PRs y QA. Preparación de demo y presentación.
 - **Viernes** — Presentación y demostración del proyecto.
 
-¡GRACIASLICENSE 
-# apiDisney
-pequeña pagina conectada a la API Disney
+¡GRACIAS!
