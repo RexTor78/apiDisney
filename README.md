@@ -2,7 +2,7 @@
 <p align="center"> <img src="img/datalandWhite.png" width="200"> </p>
 
 
-Web sobre API de ejemplo para consultar información sobre personajes, películas y parques de Disney. Está pensada como proyecto educativo/demo para mostrar endpoints REST que devuelven JSON.
+Web sobre API para consultar información sobre personajes, películas y parques de Disney. Está pensada como proyecto educativo/demo para mostrar endpoints REST que devuelven JSON.
 
 ## Tabla de contenidos
 
@@ -11,9 +11,11 @@ Web sobre API de ejemplo para consultar información sobre personajes, película
 - [Requisitos](#requisitos)
 - [Instalación y ejecución](#instalación-y-ejecución)
 - [Endpoints](#endpoints)
-- [Estructura del proyecto](#estructura-del-proyecto)
+- [Estructura](#estructura)
 - [Contribuir](#contribuir)
 - [Licencia y contacto](#licencia-y-contacto)
+- [Equipo](#equipo)
+- [Dailies](#dailies)
 
 ## Descripción
 
@@ -32,7 +34,7 @@ Web sobre API de ejemplo para consultar información sobre personajes, película
 - CSS: Definimos estilo 
 - javascript: Añade el dinamismo.
 - ​API: Provee la fuente de información.
-​- JSON: Es el formato ligero de intercambio de datos que viaja por internet.
+- JSON: Es el formato ligero de intercambio de datos que viaja por internet.
 
 
 ## Instalación y ejecución
@@ -84,7 +86,7 @@ GET /parks
 
  Se ha diseñado una estructura HTML5 modular. Utilizando Web Components para el header y footer, manteniendo el código limpio. 
 
- La parte central es dinámica: mediante JavaScript y la API de Disney, inyectamos las tarjetas de personajes en el characterSection y gestionamos la navegación con un sistema de paginación doble (arriba y abajo) para mejorar la experiencia del usuario."
+ La parte central es dinámica: mediante JavaScript y la API de Disney, inyectamos las tarjetas de personajes en el characterSection y gestionamos la navegación con un sistema de paginación doble (arriba y abajo) para mejorar la experiencia del usuario.
 
 ## Contribuir
 
@@ -102,19 +104,19 @@ Para cambios mayores, abre primero un issue para discutir la propuesta.
 La licencia del proyecto https://github.com/RexTor78/apiDisney/blob/feat/readme/LICENSE o el estado de derechos. Para dudas o propuestas abre un issue en el repositorio.
 
 
-## Equipo de trabajo
+## Equipo 
 
-- **Product Owner**: Héctor Santos — github: usuario 
-- **Scrum Master**: Xavier Piñeiro — github: usuario
-- **Developer**: Melissa Gómez — github: usuario
-- **Developer**: Suso Suárez — github: usuario 
+- **Product Owner**: Héctor Santos — 
+- **Scrum Master**: Xavier Piñeiro — 
+- **Developer**: Melissa Gómez — 
+- **Developer**: Suso Suárez —  
 
 
 Canales de comunicación:
 
 - Slack: `#equipo-disney` / Dataland
-- Repositorio: issues / pull requests en este repo
-- Documentación y notas: `docs/` o carpeta compartida
+- Repositorio: issues / pull requests 
+- Documentación y notas: `docs/` 
 
 
 ## Dailies 
@@ -133,7 +135,7 @@ Canal y enlace a la reunión:
 
 
 
-# Daily — 2025-12-16
+### Daily — 2025-12-16
 
 - Participantes: Xavier, Héctor, Melissa y Suso.
 
@@ -145,7 +147,7 @@ Canal y enlace a la reunión:
 	- ...
 
 
-Registro semanal (resúmen):
+Registro semanal:
 
 - **Lunes** — Preparación de proyecto, estructura del equipo. Definición de roles.
 - **Martes** — Fijar criterios; Tipografías y estilo.
